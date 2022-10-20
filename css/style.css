@@ -35,6 +35,7 @@ body {
   height: 100vh;
   background-color: var(--body-color);
   transition: var(--tran-03);
+  overflow-x: hidden;
 }
 
 li {
@@ -43,6 +44,14 @@ li {
 
 a {
   text-decoration: none;
+}
+
+a:focus {
+  color: white;
+}
+
+a:active {
+  color: white;
 }
 
 img {
@@ -70,9 +79,10 @@ h1 {
 }
 
 .navbar .navbar_logo {
-  color: var(--white);
+  color: var(--red);
   padding-left: 1rem;
   font-size: 1.5rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
 }
@@ -81,7 +91,7 @@ h1 {
   color: var(--white);
   padding: 0rem 1rem;
   margin: 0 2rem;
-  transform: var(--tran-05);
+  transition: var(--tran-03);
 }
 
 .navbar .navbar_link:hover {
@@ -91,7 +101,7 @@ h1 {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
     url(/css/images/gym1.jpg);
   background-size: cover;
   background-position: center;
@@ -104,12 +114,12 @@ h1 {
 
 .hero_content {
   color: var(--white);
-  padding: 3rem 1rem;
+  padding: 3rem 10.7rem;
   line-height: 1;
 }
 
 .hero_content h1 {
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(3rem, 6vw, 7rem);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
@@ -119,6 +129,11 @@ h1 {
   margin-bottom: 3.6rem;
   position: relative;
   left: 0.8rem;
+}
+
+.hero_content p span {
+  font-weight: 600;
+  color: var(--primary-color);
 }
 
 .button-parent {
@@ -146,14 +161,13 @@ h1 {
 
 /* Services Section */
 .services {
-  padding: 8rem calc((100vh - 1200px) / 2);
+  padding: 3rem calc((100vh - 1200px) / 2);
 }
 
 .services_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 4.5rem;
-  padding: 3rem;
+  padding: 3rem 11.7rem;
 }
 
 .services_img {
@@ -162,6 +176,7 @@ h1 {
   position: relative;
   top: -4rem;
   max-width: fit-content;
+  object-fit: cover;
 }
 
 .topline {
@@ -182,6 +197,7 @@ h1 {
 .services_feature {
   margin-bottom: 1.5rem;
   font-size: clamp(1rem, 5vw, 1.2rem);
+  margin-top: 2rem;
 }
 
 .fa-check-circle {
@@ -195,9 +211,8 @@ h1 {
 .plans {
   background: var(--black);
   color: var(--white);
-  padding: 6rem calc(100vw - 1100px) / 2;
+  padding: 6rem calc((100vw - 1100px) / 2);
   text-align: center;
-  padding: 2rem;
 }
 
 .plans h1 {
@@ -356,6 +371,26 @@ form {
   padding: 1rem 2rem;
 }
 
+.footer_links .socials {
+  width: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_links .socials i {
+  font-size: 1.3rem;
+}
+
+.footer_links a {
+  color: white;
+  display: block;
+  transition: var(--tran-03);
+}
+
+.footer_links a:hover {
+  color: var(--red);
+}
+
 .footer_title {
   font-size: 14px;
   margin-bottom: 16px;
@@ -369,7 +404,7 @@ form {
   transition: var(--tran-03);
 }
 
-.fotter_link:hover {
+.footer_link:hover {
   color: var(--red);
 }
 
@@ -425,6 +460,19 @@ form {
 }
 
 @media (max-width: 768px) {
+  .btn-hero {
+    padding: 0.9rem 1rem;
+  }
+
+  .hero_content {
+    text-align: center;
+    padding: 35%;
+  }
+
+  .services_heading {
+    left: 0%;
+  }
+
   .navbar_menu {
     display: none;
   }
