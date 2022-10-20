@@ -1,0 +1,592 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* Root var */
+:root {
+  /* ==== Colors ==== */
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: rgb(202, 53, 53);
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: rgb(5, 5, 5);
+  --red: #f9032f;
+  --black: #000;
+  --white: #fff;
+  /* ==== Transition ==== */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+/* Root var End */
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--body-color);
+  transition: var(--tran-03);
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+img {
+  max-width: 300px;
+}
+
+h1 {
+  margin: 0;
+}
+/* Global End */
+
+/* Main */
+
+/* Navbar Section */
+.navbar {
+  background: var(--black);
+  height: 60px;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.navbar .navbar_logo {
+  color: var(--red);
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.navbar .navbar_link {
+  color: var(--white);
+  padding: 0rem 1rem;
+  margin: 0 2rem;
+  transition: var(--tran-03);
+}
+
+.navbar .navbar_link:hover {
+  color: var(--red);
+}
+/* Navbar Section Ends */
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url(/css/images/gym1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 0.5rem calc((100vh - 1200px) / 2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero_content {
+  color: var(--white);
+  padding: 3rem 10.7rem;
+  line-height: 1;
+}
+
+.hero_content h1 {
+  font-size: clamp(3rem, 6vw, 7rem);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.hero_content p {
+  font-size: clamp(1rem, 4vw, 2.5rem);
+  margin-bottom: 3.6rem;
+  position: relative;
+  left: 0.8rem;
+}
+
+.hero_content p span {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.button-parent {
+  width: 100%;
+}
+
+.button {
+  padding: 0.9rem 3rem;
+  border: none;
+  background: var(--red);
+  color: var(--white);
+  font-size: 1.1rem;
+  cursor: pointer;
+  outline: none;
+  transition: var(--tran-05);
+  border-radius: 5px;
+  margin: 5rem 1rem;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: var(--black);
+}
+/* Hero Section Ends */
+
+/* Services Section */
+.services {
+  padding: 3rem calc((100vh - 1200px) / 2);
+}
+
+.services_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem 11.7rem;
+}
+
+.services_img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -4rem;
+  max-width: fit-content;
+  object-fit: cover;
+}
+
+.topline {
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.services_heading {
+  margin: 0 0 3rem 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+  position: relative;
+  top: 1rem;
+  left: -100%;
+}
+
+.services_feature {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  margin-top: 2rem;
+}
+
+.fa-check-circle {
+  margin-right: 0.5rem;
+  color: var(--red);
+}
+
+/* Services Section Ends */
+
+/* Plans Section */
+.plans {
+  background: var(--black);
+  color: var(--white);
+  padding: 6rem calc((100vw - 1100px) / 2);
+  text-align: center;
+}
+
+.plans h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  padding: 0 1rem;
+}
+
+.plans_desc {
+  margin-bottom: 3rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  padding: 1rem;
+}
+
+.plans_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.plans i {
+  color: var(--red);
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.membership_card {
+  padding: 2rem;
+  min-height: 450px;
+  width: 325px;
+  background: var(--white);
+  color: var(--black);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plans .button:hover {
+  background-color: var(--primary-color);
+}
+
+.plans .plans_perks {
+  margin-top: 1rem;
+  min-height: 150px;
+}
+
+.membership_card p {
+  margin-bottom: 1rem;
+}
+
+.card_icon {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--red);
+}
+
+.membership_card h3 {
+  font-size: clamp(1rem, 5vw, 2rem);
+  margin-bottom: 2rem;
+}
+/* Plans Section Ends */
+
+/* Contact Section */
+.email {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url(/css/images/gym3.jpg) no-repeat center;
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+  padding: 5rem calc(100vw - 1300px) / 2;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email_content h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 5vw, 3rem);
+  padding: 0 1rem;
+}
+
+.email_content p {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  z-index: 10;
+}
+
+.form_wrap input {
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  width: 350px;
+  height: 50px;
+  margin-right: 1rem;
+  border-radius: 4px;
+}
+/* Contact Section End */
+
+/* Footer */
+.footer {
+  padding: 5rem calc((100vw - 1100px) / 2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  color: var(--white);
+  background: var(--black);
+}
+
+.footer_desc {
+  padding: 0 2rem;
+}
+
+.footer_desc h1 {
+  margin-bottom: 2rem;
+  color: var(--red);
+  font-size: 1.5rem;
+}
+
+.footer_desc p {
+  margin-bottom: 1rem;
+}
+
+#phone {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.footer_wrapper {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer_links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+}
+
+.footer_links .socials {
+  width: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_links .socials i {
+  font-size: 1.3rem;
+}
+
+.footer_links a {
+  color: white;
+  display: block;
+  transition: var(--tran-03);
+}
+
+.footer_links a:hover {
+  color: var(--red);
+}
+
+.footer_title {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.footer_link {
+  text-decoration: none;
+  color: rgb(242, 242, 242);
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+  transition: var(--tran-03);
+}
+
+.footer_link:hover {
+  color: var(--red);
+}
+
+.copy {
+  color: var(--white);
+  z-index: 1200;
+  position: relative;
+  bottom: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 3px;
+}
+
+.spanc {
+  letter-spacing: 3px;
+  color: var(--red);
+}
+
+.spanc span {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* Footer End */
+
+/* Main End */
+
+/* Media */
+@media (max-width: 400px) {
+  .email .button {
+    width: 100%;
+    min-width: 250px;
+  }
+
+  .footer_desc {
+    padding: 1rem;
+  }
+
+  .footer_links {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .copy {
+    flex-direction: column;
+    position: relative;
+    bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-hero {
+    padding: 0.9rem 1rem;
+  }
+
+  .hero_content {
+    text-align: center;
+    padding: 35%;
+  }
+
+  .services_heading {
+    left: 0%;
+  }
+
+  .navbar_menu {
+    display: none;
+  }
+
+  .navbar_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar_menu.active {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 165px);
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    opacity: 1;
+    z-index: 99;
+    height: 93.8vh;
+    font-size: 1.5rem;
+    background: var(--black);
+  }
+
+  .navbar_toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: var(--tran-03);
+    background: var(--white);
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile_menu {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar_toggle {
+    transition: var(--tran-03);
+  }
+
+  .navbar_toggle.active {
+    height: 1.6rem;
+    background: var(--red);
+  }
+
+  .navbar_toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar_toggle.active .bar:nth-child(1) {
+    position: absolute;
+    top: 0.3rem;
+    transform: skewY(40deg);
+  }
+
+  .navbar_toggle.active .bar:nth-child(3) {
+    position: absolute;
+    top: 0.3rem;
+    transform: skewY(-40deg);
+  }
+
+  .button-parent {
+    text-align: right;
+  }
+
+  .services_container {
+    grid-template-columns: 1fr;
+  }
+
+  .services_img {
+    position: relative;
+    top: 0;
+  }
+
+  .form_wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .form_wrap input {
+    margin-bottom: 1rem;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .email button {
+    width: 100%;
+    min-width: 350px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 820px) {
+  .footer_wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1100px) {
+  .plans_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .membership_card {
+    margin-top: 2rem;
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+}
+/* Media End */
